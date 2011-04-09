@@ -4,10 +4,10 @@ use warnings;
 use strict;
 use vars qw[$VERSION];
 use Email::Address;
-use Net::SMTP::TLS;
+use Net::SMTP::TLS::ButMaintained;
 use Return::Value;
 
-$VERSION   = '0.03';
+$VERSION   = '0.04';
 
 sub is_available {
     return 1;
@@ -42,7 +42,7 @@ sub send {
     }
 
     my $host = delete($args{Host}) || 'localhost';
-    my $SMTP = new Net::SMTP::TLS($host, %args);
+    my $SMTP = Net::SMTP::TLS::ButMaintained->new($host, %args);
     
     eval {
         my $from = $class->get_env_sender($message);

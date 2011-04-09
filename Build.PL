@@ -12,7 +12,7 @@ my $builder = Module::Build->new(
         'Email::Send' => 0,
         'Email::Address' => 0,
         'Return::Value'  => 0,
-        'Net::SMTP::TLS' => 0,
+        'Net::SMTP::TLS::ButMaintained' => 0,
     },
     add_to_cleanup      => [ 'Email-Send-SMTP-TLS-*' ],
     create_makefile_pl => 'traditional',
