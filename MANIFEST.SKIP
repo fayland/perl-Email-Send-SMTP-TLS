@@ -46,3 +46,4 @@
 \B\._
 # Avoid archives of this distribution
 \bEmail-Send-SMTP-TLS-[\d\.\_]+
+^MYMETA.yml$
